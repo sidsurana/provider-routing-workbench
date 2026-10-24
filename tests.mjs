@@ -1,0 +1,2 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {analyze,sample} from './engine.mjs';
+test('missing source always goes to review',()=>assert.equal(analyze(sample).rows.find(x=>x.title.includes('Meadow')).status,'REVIEW'));test('priority requires explicit evidence',()=>assert.equal(analyze(sample).rows[0].status,'PRIORITY'));test('duplicate IDs rejected',()=>{let p=JSON.parse(sample);p[1].id=p[0].id;assert.throws(()=>analyze(JSON.stringify(p)))});

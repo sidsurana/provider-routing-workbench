@@ -1,0 +1,10 @@
+{
+  "name": "provider-routing-workbench",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests.mjs"
+  },
+  "description": "Score and route synthetic provider organizations with explicit evidence gaps.",
+  "license": "MIT"
+}
